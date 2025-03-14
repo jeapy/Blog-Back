@@ -1,0 +1,11 @@
+{% if ea.crud.currentAction == 'detail' %}
+    <div class="field-url">
+        {% set shareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' ~ absolute_url(path('app_articles_show', {'id': entity.instance.id}))|url_encode %}
+        <a href="{{ shareUrl }}" 
+           target="_blank" 
+           class="btn btn-primary">
+            <i class="fab fa-facebook"></i> 
+        </a>
+    </div>
+     
+{% endif %}
